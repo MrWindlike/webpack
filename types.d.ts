@@ -2220,7 +2220,10 @@ declare class ExportsInfo {
 	getExportInfo(name: string): ExportInfo;
 	getReadOnlyExportInfo(name: string): ExportInfo;
 	getNestedExportsInfo(name?: string[]): ExportsInfo;
-	setUnknownExportsProvided(canMangle?: boolean): boolean;
+	setUnknownExportsProvided(
+		canMangle?: boolean,
+		excludeExports?: Set<string>
+	): boolean;
 	setUsedInUnknownWay(): boolean;
 	setAllKnownExportsUsed(): boolean;
 	setUsedForSideEffectsOnly(): boolean;
